@@ -26,7 +26,7 @@ Rapidly create and control responsive, theme-focused and type-safe components, d
 responsive, theme-focused, type-safe styled-components to be rapidly created and
 controlled directly from your jsx.
 
-Originally built in-house by [Silk Studio](/) to streamline our own development pipeline, `Jynx` is now available to use in your own projects and comes with support for: 
+Originally built in-house for use at [Silk Studio](https://silkstudio.co) to streamline our own development pipeline, `Jynx` is now available to use in your own projects and comes with support for: 
 
 - rapid component styling through the use of style-props
 - using objects and arrays to create mobile-first, responsive designs
@@ -60,8 +60,3 @@ Jynx uses [shipjs](https://github.com/algolia/shipjs) for managing it's releases
 ### 📄 &nbsp;License
 
 `Jynx` is MIT licensed, Copyright © 2022-present 
-
-<footer>
-<hr style="height: 1px; margin: 2.375em auto 0.75em"/>
-<div style="font-size: 0.75em; opacity: 0.625">2022 © Silk Studio</div>
-</footer>
