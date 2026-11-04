@@ -4,7 +4,7 @@ import type { StyleFunction } from '../../types/functions'
 
 // Utils
 import { compose } from '../compose'
-import { color, ColorProps, layout, LayoutProps, space, SpaceProps } from '../../functions'
+import { color, type ColorProps, layout, type LayoutProps, space, type SpaceProps } from '../../functions'
 import { defaultBreakpoints } from '../../theme'
 
 /*

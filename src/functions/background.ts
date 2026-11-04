@@ -97,4 +97,4 @@ config.bgSize = config.backgroundSize
 
 const background = createStyleFunction<BackgroundProps>(config)
 
-export { background, config as backgroundConfig, BackgroundProps, BackgroundBaseProps, BackgroundShorthandProps }
+export { background, config as backgroundConfig, type BackgroundProps, type BackgroundBaseProps, type BackgroundShorthandProps }

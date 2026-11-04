@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import emotion from '@emotion/styled'
 
 // Utils
-import { flexbox, FlexboxProps } from '../functions'
+import { flexbox, type FlexboxProps } from '../functions'
 import { render } from '@testing-library/react'
 import '@testing-library/jest-dom'
 

@@ -234,11 +234,11 @@ export {
   marginConfig,
   paddingConfig,
   config as spaceConfig,
-  SpaceProps,
-  MarginProps,
-  MarginBaseProps,
-  MarginShorthandProps,
-  PaddingProps,
-  PaddingBaseProps,
-  PaddingShorthandProps
+  type SpaceProps,
+  type MarginProps,
+  type MarginBaseProps,
+  type MarginShorthandProps,
+  type PaddingProps,
+  type PaddingBaseProps,
+  type PaddingShorthandProps
 }

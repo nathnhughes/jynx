@@ -1,18 +1,19 @@
 {
   "compilerOptions": {
-    "lib": ["ES2020"],
-    "target": "ES2020",
-    "module": "ES2020",
-    "baseUrl": "/",
-    "declaration": true,
+    "lib": ["ES2022", "DOM"],
+    "target": "ES2022",
+    "module": "preserve",
+    "moduleResolution": "bundler",
+    "types": ["jest"],
     "strict": true,
     "noEmit": true,
     "skipLibCheck": true,
-    "jsx": "react",
+    "jsx": "react-jsx",
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "moduleResolution": "node"
+    "forceConsistentCasingInFileNames": true
   },
   "include": ["src", "rollup.config.js", "@types"],
   "exclude": ["node_modules", "docs"]

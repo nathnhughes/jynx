@@ -2,7 +2,7 @@
 import type { ThemeProps } from '../../types/theme'
 
 // Utils
-import { shadow, ShadowProps, shadowConfig } from '../shadow'
+import { shadow, type ShadowProps, shadowConfig } from '../shadow'
 import { defaultBreakpoints } from '../../theme'
 
 /*

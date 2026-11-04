@@ -93,4 +93,4 @@ const flexbox: StyleFunction<FlexboxProps> = ({ theme = {}, ...styles }) => {
 
 flexbox.config = config
 
-export { flexbox, config as flexboxConfig, FlexboxProps }
+export { flexbox, config as flexboxConfig, type FlexboxProps }

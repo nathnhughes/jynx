@@ -2,7 +2,7 @@
 import type { ThemeProps } from '../../types/theme'
 
 // Utils
-import { animation, AnimationProps, animationConfig } from '../animation'
+import { animation, type AnimationProps, animationConfig } from '../animation'
 import { defaultBreakpoints } from '../../theme'
 
 /*

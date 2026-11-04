@@ -70,4 +70,4 @@ config.z = config.zIndex
 
 const position = createStyleFunction<PositionProps>(config)
 
-export { position, config as positionConfig, PositionProps, PositionBaseProps, PositionShorthandProps }
+export { position, config as positionConfig, type PositionProps, type PositionBaseProps, type PositionShorthandProps }

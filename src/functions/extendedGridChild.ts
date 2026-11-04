@@ -1,6 +1,6 @@
 // Utils
 import { createStyleFunction } from '../constructors'
-import { gridChildConfig, GridChildProps } from './gridChild'
+import { gridChildConfig, type GridChildProps } from './gridChild'
 
 /*
 
@@ -39,4 +39,4 @@ const extendedGridChild = createStyleFunction<ExtendedGridChildProps>(config)
 
 extendedGridChild.config = config
 
-export { extendedGridChild, config as extendedGridChildConfig, ExtendedGridChildProps }
+export { extendedGridChild, config as extendedGridChildConfig, type ExtendedGridChildProps }

@@ -155,4 +155,4 @@ const grid: StyleFunction<GridProps> = ({ theme = {}, ...styles }) => {
 
 grid.config = config
 
-export { grid, config as gridConfig, GridProps }
+export { grid, config as gridConfig, type GridProps }

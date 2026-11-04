@@ -78,4 +78,4 @@ interface TypographyProps {
 
 const typography = createStyleFunction<TypographyProps>(config)
 
-export { typography, config as typographyConfig, TypographyProps }
+export { typography, config as typographyConfig, type TypographyProps }

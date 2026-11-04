@@ -2,7 +2,7 @@
 import type { ThemeProps } from '../../types/theme'
 
 // Utils
-import { extendedFlexbox, ExtendedFlexboxProps, extendedFlexboxConfig } from '../extendedFlexbox'
+import { extendedFlexbox, type ExtendedFlexboxProps, extendedFlexboxConfig } from '../extendedFlexbox'
 import { defaultBreakpoints } from '../../theme'
 
 /*
