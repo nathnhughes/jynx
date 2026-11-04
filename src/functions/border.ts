@@ -157,4 +157,4 @@ interface BorderProps {
 
 const border = createStyleFunction<BorderProps>(config)
 
-export { border, config as borderConfig, BorderProps }
+export { border, config as borderConfig, type BorderProps }

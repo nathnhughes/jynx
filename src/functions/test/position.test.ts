@@ -2,7 +2,7 @@
 import type { ThemeProps } from '../../types/theme'
 
 // Utils
-import { position, PositionProps, positionConfig } from '../position'
+import { position, type PositionProps, positionConfig } from '../position'
 import { defaultBreakpoints } from '../../theme'
 
 /*

@@ -64,4 +64,4 @@ interface AnimationProps {
 
 const animation = createStyleFunction<AnimationProps>(config)
 
-export { animation, config as animationConfig, AnimationProps }
+export { animation, config as animationConfig, type AnimationProps }

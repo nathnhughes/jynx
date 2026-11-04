@@ -2,7 +2,7 @@
 import type { ThemeProps } from '../../types/theme'
 
 // Utils
-import { gridChild, GridChildProps, gridChildConfig } from '../gridChild'
+import { gridChild, type GridChildProps, gridChildConfig } from '../gridChild'
 import { defaultBreakpoints } from '../../theme'
 
 /*

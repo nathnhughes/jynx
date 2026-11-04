@@ -2,7 +2,7 @@
 import type { ThemeProps } from '../../types/theme'
 
 // Utils
-import { border, BorderProps, borderConfig } from '../border'
+import { border, type BorderProps, borderConfig } from '../border'
 import { defaultBreakpoints } from '../../theme'
 
 /*

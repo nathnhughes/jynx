@@ -2,7 +2,7 @@
 import type { ThemeProps } from '../../types/theme'
 
 // Utils
-import { typography, TypographyProps, typographyConfig } from '../typography'
+import { typography, type TypographyProps, typographyConfig } from '../typography'
 import { defaultBreakpoints } from '../../theme'
 
 /*

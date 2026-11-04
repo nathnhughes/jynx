@@ -2,7 +2,7 @@
 import type { StyleFunction, StyleFunctionConfig } from '../types/functions'
 
 // Utils
-import { gridConfig, GridProps } from './grid'
+import { gridConfig, type GridProps } from './grid'
 import { createStylesObject } from '../constructors'
 import { fallbackTheme } from '../theme'
 import deepmerge from 'deepmerge'
@@ -82,4 +82,4 @@ const extendedGrid: StyleFunction<ExtendedGridProps> = ({ theme = {}, ...styles 
 
 extendedGrid.config = config
 
-export { extendedGrid, config as extendedGridConfig, ExtendedGridProps }
+export { extendedGrid, config as extendedGridConfig, type ExtendedGridProps }
