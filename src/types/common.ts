@@ -55,4 +55,4 @@ export type OneOrMany<T> = T | T[]
  *
  * @since 1.2.1
  */
-export type LiteralUnion<T> = T | (string & {}) // eslint-disable-line @typescript-eslint/ban-types
+export type LiteralUnion<T> = T | (string & {})

@@ -1,5 +1,3 @@
-/* eslint-disable  @typescript-eslint/ban-types */
-
 // Types
 import type { CSSProperties } from '../types/css'
 
