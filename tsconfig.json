@@ -4,7 +4,7 @@
     "target": "ES2022",
     "module": "preserve",
     "moduleResolution": "bundler",
-    "types": ["jest"],
+    "types": ["vitest/globals"],
     "strict": true,
     "noEmit": true,
     "skipLibCheck": true,
@@ -15,6 +15,6 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true
   },
-  "include": ["src", "rollup.config.js", "@types"],
+  "include": ["src", "rollup.config.js", "vitest.config.ts", "vitest.setup.ts", "@types"],
   "exclude": ["node_modules", "docs"]
 }
