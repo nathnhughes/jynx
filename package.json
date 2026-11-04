@@ -20,12 +20,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/silkstudio/jynx.git"
+    "url": "git+https://github.com/nathnhughes/jynx.git"
   },
-  "author": "Silk Studio",
+  "author": "Nathan Hughes",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/silkstudio/jynx/issues"
+    "url": "https://github.com/nathnhughes/jynx/issues"
   },
   "homepage": "https://jynx.vercel.app",
   "scripts": {
