@@ -1,8 +1,0 @@
-.DS_Store
-.prettierrc
-.prettierignore
-.gitignore
-.lintstagedrc
-jest.config.js
-rollup.config.js
-src
