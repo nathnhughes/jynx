@@ -49,6 +49,46 @@ Check out the [introduction](https://jynx.vercel.app/introduction) to get up and
 - [Advanced Theming](https://jynx.vercel.app/theming/setup)
 - [Creating Style Functions](https://jynx.vercel.app/utilities/create-style-function)
 
+### 💅 &nbsp;Usage with styled-components v6
+
+styled-components v6 no longer filters unknown props, so without extra setup every jynx style prop (`m`, `bg`, `alignItems`, ...) is passed through to the DOM and React logs "does not recognize the prop" warnings. Use the `shouldForwardProp` helper exported by jynx to stop this, either per component:
+
+```tsx
+import styled from 'styled-components'
+import { shouldForwardProp, space, type SpaceProps } from 'jynx'
+
+const Box = styled.div.withConfig({ shouldForwardProp })<SpaceProps>`
+  ${space}
+`
+```
+
+or for your whole app:
+
+```tsx
+import { StyleSheetManager } from 'styled-components'
+import { shouldForwardProp } from 'jynx'
+
+const App = () => (
+  <StyleSheetManager shouldForwardProp={shouldForwardProp}>
+    {/* ... */}
+  </StyleSheetManager>
+)
+```
+
+`shouldForwardProp` only removes jynx props and forwards everything else. If you also want to filter your own non-HTML props, combine it with [`@emotion/is-prop-valid`](https://www.npmjs.com/package/@emotion/is-prop-valid):
+
+```tsx
+import isPropValid from '@emotion/is-prop-valid'
+import { shouldForwardProp } from 'jynx'
+
+const forwardProp = (prop: string, target: unknown) =>
+  typeof target === 'string' ? isPropValid(prop) && shouldForwardProp(prop) : shouldForwardProp(prop)
+
+// <StyleSheetManager shouldForwardProp={forwardProp}> or styled.div.withConfig({ shouldForwardProp: forwardProp })
+```
+
+Emotion doesn't need this setup: `@emotion/styled` already drops invalid HTML props by default.
+
 ### 💻 &nbsp;Development
 
 Jynx uses [shipjs](https://github.com/algolia/shipjs) for managing it's releases. For devs issuing a new release, simply run `yarn release` in your local terminal and follow the CLI wizard.
