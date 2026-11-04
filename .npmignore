@@ -3,6 +3,6 @@
 .prettierignore
 .gitignore
 .lintstagedrc
-jest.config.js
+vitest.config.ts
 rollup.config.js
 src
