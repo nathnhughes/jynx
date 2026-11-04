@@ -7,7 +7,7 @@
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/jynx.js"
+      "import": "./dist/index.js"
     },
     "./package.json": "./package.json"
   },
@@ -39,10 +39,8 @@
   },
   "homepage": "https://jynx.vercel.app",
   "scripts": {
-    "clean": "rimraf dist",
-    "build": "npm run clean && rollup -c",
-    "build:dev": "if [ -e \"dist\" ];then rm -rf \"dist\"; fi && rollup -c",
-    "watch": "rollup -c -w",
+    "build": "tsdown",
+    "dev": "tsdown --watch",
     "format": "prettier --write \"src/**/*.+(ts|tsx|js|jsx|md)\"",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
@@ -63,7 +61,6 @@
     "@types/react-dom": "^18.2.6",
     "@types/styled-components": "^5.1.26",
     "@vitest/coverage-v8": "^5.1.0",
-    "esbuild": "^0.28.2",
     "eslint": "^10.14.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-import-x": "^4.17.1",
@@ -77,13 +74,10 @@
     "prettier": "^2.4.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "rimraf": "^5.0.1",
-    "rollup": "^2.60.0",
-    "rollup-plugin-dts": "^4.0.1",
-    "rollup-plugin-esbuild": "^4.6.0",
     "shipjs": "0.25.1",
     "styled-components": "5.3.10",
     "ts-essentials": "^9.0.0",
+    "tsdown": "^0.23.5",
     "typescript": "~6.0.3",
     "typescript-eslint": "^8.72.1",
     "vitest": "^5.1.0"
@@ -104,9 +98,6 @@
     },
     "eslint-plugin-react": {
       "eslint": "$eslint"
-    },
-    "rollup-plugin-dts": {
-      "typescript": "$typescript"
     }
   }
 }

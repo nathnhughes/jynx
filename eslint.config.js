@@ -12,7 +12,7 @@ import globals from 'globals'
 const reactVersion = createRequire(import.meta.url)('react/package.json').version
 
 export default defineConfig([
-  globalIgnores(['dist', 'coverage', '.claude', 'docs', 'rollup.config.js', '**/*.md']),
+  globalIgnores(['dist', 'coverage', '.claude', 'docs', '**/*.md']),
   js.configs.recommended,
   tseslint.configs.recommendedTypeChecked,
   react.configs.flat.recommended,
