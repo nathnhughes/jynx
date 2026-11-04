@@ -4,4 +4,35 @@ updates:
     directory: "/"
     target-branch: "dev"
     schedule:
-      interval: "daily"
+      interval: "weekly"
+    groups:
+      eslint:
+        patterns:
+          - "eslint"
+          - "eslint-*"
+          - "typescript-eslint"
+          - "@typescript-eslint/*"
+          - "@eslint/*"
+        update-types:
+          - "minor"
+          - "patch"
+      react:
+        patterns:
+          - "react"
+          - "react-dom"
+          - "@types/react"
+          - "@types/react-*"
+        update-types:
+          - "minor"
+          - "patch"
+      dev-dependencies:
+        dependency-type: "development"
+        update-types:
+          - "minor"
+          - "patch"
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    target-branch: "dev"
+    schedule:
+      interval: "weekly"
