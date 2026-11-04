@@ -21,11 +21,6 @@ const configDev = {
   ...configBase,
   output: [
     {
-      file: `dist/jynx.cjs.js`,
-      format: 'cjs',
-      sourcemap: true
-    },
-    {
       file: `dist/jynx.js`,
       format: 'es',
       sourcemap: true
@@ -37,11 +32,6 @@ const configDev = {
 const configProd = {
   ...configDev,
   output: [
-    {
-      file: 'dist/jynx.cjs.min.js',
-      format: 'cjs',
-      sourcemap: true
-    },
     {
       file: 'dist/jynx.min.js',
       format: 'esm',

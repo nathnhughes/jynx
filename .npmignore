@@ -1,8 +1,0 @@
-.DS_Store
-.prettierrc
-.prettierignore
-.gitignore
-.lintstagedrc
-vitest.config.ts
-rollup.config.js
-src
