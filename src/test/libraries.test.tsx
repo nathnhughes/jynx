@@ -6,8 +6,7 @@ import emotion from '@emotion/styled'
 
 // Utils
 import { flexbox, type FlexboxProps } from '../functions'
-import { render } from '@testing-library/react'
-import '@testing-library/jest-dom'
+import { render, screen } from '@testing-library/react'
 
 // Components
 const StyledComponentsInterpolation = styled('div')<FlexboxProps>`
@@ -67,21 +66,23 @@ export const TestComponents: React.FC = () => {
 }
 
 describe('Mounting tests', () => {
-  const component = render(<TestComponents />)
+  beforeEach(() => {
+    render(<TestComponents />)
+  })
 
   it('mounts styled-components interpolation', () => {
-    expect(component.findByText(children.styledComponentsInterpolation)).toBeDefined()
+    expect(screen.getByText(children.styledComponentsInterpolation)).toBeInTheDocument()
   })
 
   it('mounts styled-components object', () => {
-    expect(component.findByText(children.styledComponentsObject)).toBeDefined()
+    expect(screen.getByText(children.styledComponentsObject)).toBeInTheDocument()
   })
 
   it('mounts emotion interpolation', () => {
-    expect(component.findByText(children.emotionInterpolation)).toBeDefined()
+    expect(screen.getByText(children.emotionInterpolation)).toBeInTheDocument()
   })
 
   it('mounts emotion object', () => {
-    expect(component.findByText(children.emotionObject)).toBeDefined()
+    expect(screen.getByText(children.emotionObject)).toBeInTheDocument()
   })
 })
