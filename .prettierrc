@@ -4,13 +4,5 @@
   "trailingComma": "none",
   "semi": false,
   "bracketSpacing": true,
-  "arrowParens": "avoid",
-  "overrides": [
-    {
-      "files": [".ts", ".tsx"],
-      "options": {
-        "parser": "typescript"
-      }
-    }
-  ]
+  "arrowParens": "avoid"
 }
