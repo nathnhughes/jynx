@@ -91,11 +91,7 @@ Emotion doesn't need this setup: `@emotion/styled` already drops invalid HTML pr
 
 ### 💻 &nbsp;Development
 
-Jynx uses [shipjs](https://github.com/algolia/shipjs) for managing it's releases. For devs issuing a new release, simply run `yarn release` in your local terminal and follow the CLI wizard.
-
-#### __Notes on Releasing__
-- When merging a shipjs-created PR always make sure to `Squash & Merge` *(failure to do so will cause issues due to the commit name)*.
-- If you are experiencing auth issues with git/github you may need to authorise a new `GITHUB_TOKEN`.
+Releases are managed by [release-please](https://github.com/googleapis/release-please) from [conventional commits](https://www.conventionalcommits.org). Each push to `main` updates an open release PR with the next version and `CHANGELOG.md` entries. Merging that PR tags the release, creates a GitHub Release and publishes to npm with provenance through npm trusted publishing (OIDC), so no npm token is needed.
 
 ### 📄 &nbsp;License
 

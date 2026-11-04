@@ -50,8 +50,11 @@
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
     "prepare": "husky",
-    "prepublishOnly": "npm run build && npm run check:pkg",
-    "release": "shipjs prepare"
+    "prepublishOnly": "npm run build && npm run check:pkg"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
   },
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.18.5",
@@ -78,7 +81,6 @@
     "publint": "^0.3.25",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
-    "shipjs": "0.25.1",
     "styled-components": "^6.6.0",
     "ts-essentials": "^9.0.0",
     "tsdown": "^0.23.5",
