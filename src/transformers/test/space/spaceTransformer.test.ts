@@ -102,6 +102,6 @@ describe('When an incorrect value is passed', () => {
     expect(spaceScaleTransformer(null as unknown as string)).toBe(undefined)
     expect(spaceScaleTransformer(true as unknown as string)).toBe(undefined)
     expect(spaceScaleTransformer(false as unknown as string)).toBe(undefined)
-    expect(spaceScaleTransformer({} as unknown as string)).toEqual(undefined)
+    expect(spaceScaleTransformer({})).toEqual(undefined)
   })
 })

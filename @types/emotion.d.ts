@@ -1,4 +1,3 @@
-// eslint-disable-next-line
 import '@emotion/react'
 import type { DefaultTheme } from '../src/types/theme'
 
