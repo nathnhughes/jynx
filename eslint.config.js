@@ -1,14 +1,17 @@
-const { defineConfig, globalIgnores } = require('eslint/config')
-const js = require('@eslint/js')
-const tseslint = require('typescript-eslint')
-const react = require('eslint-plugin-react')
-const reactHooks = require('eslint-plugin-react-hooks')
-const jsxA11y = require('eslint-plugin-jsx-a11y')
-const importX = require('eslint-plugin-import-x')
-const prettier = require('eslint-config-prettier/flat')
-const globals = require('globals')
+import { createRequire } from 'node:module'
+import { defineConfig, globalIgnores } from 'eslint/config'
+import js from '@eslint/js'
+import tseslint from 'typescript-eslint'
+import react from 'eslint-plugin-react'
+import reactHooks from 'eslint-plugin-react-hooks'
+import jsxA11y from 'eslint-plugin-jsx-a11y'
+import { createNodeResolver, flatConfigs as importXConfigs } from 'eslint-plugin-import-x'
+import prettier from 'eslint-config-prettier/flat'
+import globals from 'globals'
 
-module.exports = defineConfig([
+const reactVersion = createRequire(import.meta.url)('react/package.json').version
+
+export default defineConfig([
   globalIgnores(['dist', 'coverage', 'docs', 'rollup.config.js', '**/*.md']),
   js.configs.recommended,
   tseslint.configs.recommendedTypeChecked,
@@ -16,19 +19,19 @@ module.exports = defineConfig([
   react.configs.flat['jsx-runtime'],
   reactHooks.configs.flat.recommended,
   jsxA11y.flatConfigs.recommended,
-  importX.flatConfigs.recommended,
-  importX.flatConfigs.typescript,
+  importXConfigs.recommended,
+  importXConfigs.typescript,
   {
     languageOptions: {
       parserOptions: {
         projectService: true,
-        tsconfigRootDir: __dirname
+        tsconfigRootDir: import.meta.dirname
       }
     },
     settings: {
-      'import-x/resolver-next': [importX.createNodeResolver({ extensions: ['.ts', '.tsx', '.d.ts', '.js'] })],
+      'import-x/resolver-next': [createNodeResolver({ extensions: ['.ts', '.tsx', '.d.ts', '.js'] })],
       // 'detect' calls context.getFilename(), which ESLint 10 removed
-      react: { version: require('react/package.json').version }
+      react: { version: reactVersion }
     },
     rules: {
       'no-param-reassign': ['error', { props: false }],
@@ -71,11 +74,9 @@ module.exports = defineConfig([
     files: ['**/*.js'],
     extends: [tseslint.configs.disableTypeChecked],
     languageOptions: {
-      sourceType: 'commonjs',
       globals: globals.node
     },
     rules: {
-      '@typescript-eslint/no-require-imports': 'off',
       '@typescript-eslint/explicit-function-return-type': 'off',
       '@typescript-eslint/naming-convention': 'off'
     }
