@@ -2,9 +2,16 @@
   "name": "jynx",
   "version": "1.3.3",
   "description": "Rapidly create and control responsive, theme-focused and type-safe styled-components, directly from your jsx.",
-  "main": "./dist/jynx.cjs.js",
-  "module": "./dist/jynx.js",
-  "typings": "./dist/index.d.ts",
+  "type": "module",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/jynx.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "sideEffects": false,
   "keywords": [
     "react",
     "typescript",
@@ -18,6 +25,9 @@
   "files": [
     "dist"
   ],
+  "engines": {
+    "node": ">=22.12"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nathnhughes/jynx.git"
