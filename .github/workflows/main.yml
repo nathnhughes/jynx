@@ -24,13 +24,13 @@ jobs:
           node-version: ${{ matrix.node }}
 
       - name: Install
-        run: yarn
+        run: npm ci
 
       - name: Lint
-        run: yarn lint
+        run: npm run lint
 
       - name: Test
-        run: yarn test --ci --maxWorkers=2
+        run: npm test -- --ci --maxWorkers=2
 
       - name: Build
-        run: yarn build
+        run: npm run build

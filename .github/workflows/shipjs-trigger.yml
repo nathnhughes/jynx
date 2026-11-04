@@ -17,12 +17,7 @@ jobs:
         with:
           node-version: 14
           registry-url: 'https://registry.npmjs.org'
-      - run: |
-          if [ -f "yarn.lock" ]; then
-            yarn install
-          else
-            npm install
-          fi
+      - run: npm ci
       - run: |
           git config --global user.email "nathanhughes57@gmail.com"
           git config --global user.name "Nathan Hughes"
