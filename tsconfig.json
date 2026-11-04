@@ -15,6 +15,6 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true
   },
-  "include": ["src", "rollup.config.js", "vitest.config.ts", "vitest.setup.ts", "@types"],
+  "include": ["src", "tsdown.config.ts", "vitest.config.ts", "vitest.setup.ts", "@types"],
   "exclude": ["node_modules", "docs"]
 }
