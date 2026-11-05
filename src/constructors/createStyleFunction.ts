@@ -2,8 +2,7 @@
 import type { StyleFunction, StyleFunctionConfig } from '../types/functions'
 
 // Utils
-import deepmerge from 'deepmerge'
-import { fallbackTheme } from '../theme'
+import { mergeTheme } from '../utils/mergeTheme'
 import { createStylesObject } from './createStylesObject'
 
 /**
@@ -30,7 +29,7 @@ import { createStylesObject } from './createStylesObject'
 
 const createStyleFunction = <K extends object>(config: StyleFunctionConfig): StyleFunction<K> => {
   const builder: StyleFunction<K> = ({ theme = {}, ...styles }) => {
-    const _theme = deepmerge(fallbackTheme, theme)
+    const _theme = mergeTheme(theme)
     return createStylesObject<typeof styles>(styles, _theme, config)
   }
 
