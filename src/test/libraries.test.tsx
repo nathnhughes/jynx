@@ -3,6 +3,7 @@ import { vi, type MockInstance } from 'vitest'
 
 // Libraries
 import styled, { StyleSheetManager } from 'styled-components'
+import styledComponentsPackage from 'styled-components/package.json'
 import emotion from '@emotion/styled'
 
 // Utils
@@ -52,6 +53,9 @@ const children = {
 
 const jynxAttributes = ['flex', 'alignItems', 'justifyContent', 'm', 'p', 'bg', 'color']
 
+// StyleSheetManager only accepts shouldForwardProp from styled-components 6
+const supportsManagerShouldForwardProp = !styledComponentsPackage.version.startsWith('5.')
+
 /*
 
 
@@ -66,13 +70,13 @@ export const TestComponents: React.FC = () => {
     justifyContent: { _: 'flex-end', sm: 'end' }
   }
 
-  const props: Props = {
+  const props = {
     ...flexboxProps,
     m: 2,
     p: '4px',
     bg: 'blue',
     color: 'red'
-  }
+  } satisfies Props
 
   return (
     <>
@@ -84,7 +88,7 @@ export const TestComponents: React.FC = () => {
         <>{children.styledComponentsObject}</>
       </StyledComponentsObject>
 
-      <StyleSheetManager shouldForwardProp={shouldForwardProp}>
+      <StyleSheetManager {...{ shouldForwardProp }}>
         <StyledComponentsManager {...props}>
           <>{children.styledComponentsManager}</>
         </StyledComponentsManager>
@@ -139,16 +143,17 @@ describe('Mounting tests', () => {
     expect(screen.getByText(children.emotionObject)).toBeInTheDocument()
   })
 
-  it.each([children.styledComponentsInterpolation, children.styledComponentsObject, children.styledComponentsManager])(
-    'does not forward jynx props to the DOM (%s)',
-    text => {
-      const element = screen.getByText(text)
+  it.each([
+    children.styledComponentsInterpolation,
+    children.styledComponentsObject,
+    ...(supportsManagerShouldForwardProp ? [children.styledComponentsManager] : [])
+  ])('does not forward jynx props to the DOM (%s)', text => {
+    const element = screen.getByText(text)
 
-      jynxAttributes.forEach(attribute => {
-        expect(element).not.toHaveAttribute(attribute)
-      })
-    }
-  )
+    jynxAttributes.forEach(attribute => {
+      expect(element).not.toHaveAttribute(attribute)
+    })
+  })
 
   it('keeps non-jynx props on styled-components elements', () => {
     expect(screen.getByText(children.styledComponentsInterpolation)).toHaveStyle({ color: 'rgb(0, 128, 0)' })
