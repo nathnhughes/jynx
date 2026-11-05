@@ -1,0 +1,53 @@
+name: Bug report
+description: Report something that doesn't work as expected
+labels: [bug]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Describe the bug and what you expected to happen instead.
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Reproduction
+      description: A link to a minimal repro (CodeSandbox, StackBlitz or a repo), or the steps and code needed to reproduce the bug.
+    validations:
+      required: true
+  - type: input
+    id: jynx-version
+    attributes:
+      label: jynx version
+      placeholder: e.g. 1.3.3
+    validations:
+      required: true
+  - type: dropdown
+    id: styling-library
+    attributes:
+      label: Styling library
+      options:
+        - styled-components
+        - emotion
+    validations:
+      required: true
+  - type: input
+    id: styling-library-version
+    attributes:
+      label: styled-components or emotion version
+      placeholder: e.g. styled-components 6.1.0 or @emotion/styled 11.14.0
+    validations:
+      required: true
+  - type: input
+    id: react-version
+    attributes:
+      label: React version
+      placeholder: e.g. 19.0.0
+    validations:
+      required: true
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else?
+      description: Logs, screenshots, TypeScript version, browser or anything else that might help.
