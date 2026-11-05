@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Documentation
+    url: https://jynx.vercel.app
+    about: Read the docs for guides and API reference.
+  - name: Security vulnerability
+    url: https://github.com/nathnhughes/jynx/security/advisories/new
+    about: Report security problems privately, not as a public issue.
