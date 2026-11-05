@@ -12,32 +12,32 @@ Rapidly create and control responsive, theme-focused and type-safe components, d
 
 <div align="center">
 
-![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/silkstudio/jynx/main.yml?branch=main&label=CI&logo=git&logoColor=white)
-![npm](https://img.shields.io/npm/v/jynx)
-![npm](https://img.shields.io/npm/dw/jynx)
-![GitHub Repo stars](https://img.shields.io/github/stars/silkstudio/jynx)
-![GitHub](https://img.shields.io/github/license/silkstudio/jynx)
+[![CI](https://img.shields.io/github/actions/workflow/status/nathnhughes/jynx/main.yml?branch=main&label=CI&logo=github&logoColor=white)](https://github.com/nathnhughes/jynx/actions/workflows/main.yml)
+[![npm version](https://img.shields.io/npm/v/jynx)](https://www.npmjs.com/package/jynx)
+[![npm downloads](https://img.shields.io/npm/dw/jynx)](https://www.npmjs.com/package/jynx)
+[![bundle size](https://img.shields.io/bundlephobia/minzip/jynx)](https://bundlephobia.com/package/jynx)
+[![types included](https://img.shields.io/npm/types/jynx)](https://www.npmjs.com/package/jynx)
+[![GitHub Repo stars](https://img.shields.io/github/stars/nathnhughes/jynx)](https://github.com/nathnhughes/jynx)
+[![license](https://img.shields.io/github/license/nathnhughes/jynx)](https://github.com/nathnhughes/jynx/blob/main/LICENSE)
 
 </div>
 
-<hr style="height: 1px; margin-bottom: 2.375em;"/>
+---
 
 `Jynx` is a performant and intuitive utility library for the _'CSS-in-JS era'_, allowing for
 responsive, theme-focused, type-safe styled-components to be rapidly created and
 controlled directly from your jsx.
 
-Originally built in-house by [Silk Studio](/) to streamline our own development pipeline, `Jynx` is now available to use in your own projects and comes with support for: 
+Originally built in-house by Silk Studio to streamline our own development pipeline, `Jynx` is now available to use in your own projects and comes with support for: 
 
 - rapid component styling through the use of style-props
 - using objects and arrays to create mobile-first, responsive designs
 - integration with a global theme that's accessed directly from your props
 - written in Typescript and fully type-safe
 
-<hr style="opacity: 0;"/>
-
 ### ✏️ &nbsp;Getting Started
 
-Check out the [introduction](https://jynx.vercel.app/introduction) to get up and running or head to [jynx.vercel.app](https://jynx.vercel.app) to view the full documentation.
+Check out the [introduction](https://jynx.vercel.app/getting-started/introduction) to get up and running or head to [jynx.vercel.app](https://jynx.vercel.app) to view the full documentation.
 
 ### 🔗 &nbsp;Quick Links
 
@@ -95,9 +95,4 @@ Releases are managed by [release-please](https://github.com/googleapis/release-p
 
 ### 📄 &nbsp;License
 
-`Jynx` is MIT licensed, Copyright © 2022-present 
-
-<footer>
-<hr style="height: 1px; margin: 2.375em auto 0.75em"/>
-<div style="font-size: 0.75em; opacity: 0.625">2022 © Silk Studio</div>
-</footer>
+`Jynx` is [MIT licensed](./LICENSE), Copyright © 2021-present Nathan Hughes.
