@@ -6,8 +6,7 @@ import type { StyleFunction, StyleFunctionConfig } from '../types/functions'
 
 // Utils
 import { createStylesObject } from '../constructors'
-import { fallbackTheme } from '../theme'
-import deepmerge from 'deepmerge'
+import { mergeTheme } from '../utils/mergeTheme'
 
 /*
 
@@ -80,7 +79,7 @@ interface FlexboxProps {
 }
 
 const flexbox: StyleFunction<FlexboxProps> = ({ theme = {}, ...styles }) => {
-  const _theme = deepmerge(fallbackTheme, theme)
+  const _theme = mergeTheme(theme)
 
   const result = createStylesObject<FlexboxProps>(styles, _theme, config)
 
