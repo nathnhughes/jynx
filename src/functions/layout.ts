@@ -111,4 +111,4 @@ config.vAlign = config.verticalAlign
 
 const layout = createStyleFunction<LayoutProps>(config)
 
-export { layout, config as layoutConfig, LayoutProps }
+export { layout, config as layoutConfig, type LayoutProps }

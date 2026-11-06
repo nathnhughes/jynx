@@ -48,4 +48,4 @@ config.bgColor = config.backgroundColor
 
 const color = createStyleFunction<ColorProps>(config)
 
-export { color, config as colorConfig, ColorProps, ColorBaseProps, ColorShorthandProps }
+export { color, config as colorConfig, type ColorProps, type ColorBaseProps, type ColorShorthandProps }

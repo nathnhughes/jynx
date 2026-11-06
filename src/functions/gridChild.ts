@@ -3,7 +3,7 @@ import type { StyleFunctionConfig } from '../types/functions'
 
 // Utils
 import { createStyleFunction } from '../constructors'
-import { gridConfig, GridProps } from './grid'
+import { gridConfig, type GridProps } from './grid'
 
 /*
 
@@ -47,4 +47,4 @@ const gridChild = createStyleFunction<GridChildProps>(config)
 
 gridChild.config = config
 
-export { gridChild, config as gridChildConfig, GridChildProps }
+export { gridChild, config as gridChildConfig, type GridChildProps }

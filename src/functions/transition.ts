@@ -50,4 +50,4 @@ interface TransitionProps {
 
 const transition = createStyleFunction<TransitionProps>(config)
 
-export { transition, config as transitionConfig, TransitionProps }
+export { transition, config as transitionConfig, type TransitionProps }

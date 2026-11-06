@@ -36,4 +36,4 @@ interface ShadowProps {
 
 const shadow = createStyleFunction<ShadowProps>(config)
 
-export { shadow, config as shadowConfig, ShadowProps }
+export { shadow, config as shadowConfig, type ShadowProps }

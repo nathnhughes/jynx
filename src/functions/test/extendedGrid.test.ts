@@ -2,7 +2,7 @@
 import type { ThemeProps } from '../../types/theme'
 
 // Utils
-import { extendedGrid, ExtendedGridProps, extendedGridConfig } from '../extendedGrid'
+import { extendedGrid, type ExtendedGridProps, extendedGridConfig } from '../extendedGrid'
 import { defaultBreakpoints } from '../../theme'
 
 /*

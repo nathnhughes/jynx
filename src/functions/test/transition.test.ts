@@ -2,7 +2,7 @@
 import type { ThemeProps } from '../../types/theme'
 
 // Utils
-import { transition, TransitionProps, transitionConfig } from '../transition'
+import { transition, type TransitionProps, transitionConfig } from '../transition'
 import { defaultBreakpoints } from '../../theme'
 
 /*

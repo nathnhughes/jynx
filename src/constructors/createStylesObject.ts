@@ -5,7 +5,7 @@ import type { CSSObject } from '../types/css'
 
 // Utils
 import { parser } from '../parsers/parser'
-import deepMerge from 'deepmerge'
+import { deepMerge } from '../utils/deepMerge'
 
 /**
  * Function used to build a style object from the raw styles, a given theme and a config object.

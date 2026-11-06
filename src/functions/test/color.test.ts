@@ -2,7 +2,7 @@
 import type { ThemeProps } from '../../types/theme'
 
 // Utils
-import { color, ColorProps, colorConfig } from '../color'
+import { color, type ColorProps, colorConfig } from '../color'
 import { defaultBreakpoints } from '../../theme'
 
 /*

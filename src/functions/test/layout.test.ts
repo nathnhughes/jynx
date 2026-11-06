@@ -2,7 +2,7 @@
 import type { ThemeProps } from '../../types/theme'
 
 // Utils
-import { layout, LayoutProps, layoutConfig } from '../layout'
+import { layout, type LayoutProps, layoutConfig } from '../layout'
 import { defaultBreakpoints } from '../../theme'
 
 /*

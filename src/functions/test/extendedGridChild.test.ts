@@ -2,7 +2,7 @@
 import type { ThemeProps } from '../../types/theme'
 
 // Utils
-import { extendedGridChild, ExtendedGridChildProps, extendedGridChildConfig } from '../extendedGridChild'
+import { extendedGridChild, type ExtendedGridChildProps, extendedGridChildConfig } from '../extendedGridChild'
 import { defaultBreakpoints } from '../../theme'
 
 /*

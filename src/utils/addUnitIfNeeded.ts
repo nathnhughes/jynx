@@ -36,6 +36,7 @@ const addUnitIfNeeded = <T extends keyof CSSProperties>(property: T, value?: CSS
     return `${value}px` // Presumes implicit 'px' suffix for unitless numbers
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-base-to-string
   return String(value).trim()
 }
 

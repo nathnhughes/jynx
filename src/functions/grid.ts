@@ -6,8 +6,7 @@ import type { StyleFunction, StyleFunctionConfig } from '../types/functions'
 
 // Utils
 import { createStylesObject } from '../constructors'
-import { fallbackTheme } from '../theme'
-import deepmerge from 'deepmerge'
+import { mergeTheme } from '../utils/mergeTheme'
 
 /*
 
@@ -142,7 +141,7 @@ interface GridProps {
 }
 
 const grid: StyleFunction<GridProps> = ({ theme = {}, ...styles }) => {
-  const _theme = deepmerge(fallbackTheme, theme)
+  const _theme = mergeTheme(theme)
 
   const result = createStylesObject<GridProps>(styles, _theme, config)
 
@@ -155,4 +154,4 @@ const grid: StyleFunction<GridProps> = ({ theme = {}, ...styles }) => {
 
 grid.config = config
 
-export { grid, config as gridConfig, GridProps }
+export { grid, config as gridConfig, type GridProps }

@@ -2,10 +2,9 @@
 import type { StyleFunction, StyleFunctionConfig } from '../types/functions'
 
 // Utils
-import { flexboxConfig, FlexboxProps } from './flexbox'
+import { flexboxConfig, type FlexboxProps } from './flexbox'
 import { createStylesObject } from '../constructors'
-import { fallbackTheme } from '../theme/theme'
-import deepMerge from 'deepmerge'
+import { mergeTheme } from '../utils/mergeTheme'
 
 /*
 
@@ -43,7 +42,7 @@ config.shrink = config.flexShrink
 config.basis = config.flexBasis
 
 const extendedFlexbox: StyleFunction<ExtendedFlexboxProps> = ({ theme = {}, ...styles }) => {
-  const _theme = deepMerge(fallbackTheme, theme)
+  const _theme = mergeTheme(theme)
 
   const result = createStylesObject<ExtendedFlexboxProps>(styles, _theme, config)
 
@@ -56,4 +55,4 @@ const extendedFlexbox: StyleFunction<ExtendedFlexboxProps> = ({ theme = {}, ...s
 
 extendedFlexbox.config = config
 
-export { extendedFlexbox, config as extendedFlexboxConfig, ExtendedFlexboxProps, FlexboxShorthandProps }
+export { extendedFlexbox, config as extendedFlexboxConfig, type ExtendedFlexboxProps, type FlexboxShorthandProps }

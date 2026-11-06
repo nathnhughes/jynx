@@ -1,7 +1,7 @@
 // Utils
 import { createStylesObject } from '../createStylesObject'
 import { mockTheme } from '../../theme'
-import { ColorProps, colorConfig } from '../../functions/color'
+import { type ColorProps, colorConfig } from '../../functions/color'
 
 /*
 
